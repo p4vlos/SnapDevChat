@@ -57,16 +57,17 @@
                         <outlet property="cameraBtn" destination="V2b-hz-0Eb" id="Ijk-dK-E3e"/>
                         <outlet property="previewView" destination="Ye2-8u-grb" id="E2Y-MY-dn2"/>
                         <outlet property="recordBtn" destination="mq0-Dc-Ao5" id="3ME-jx-juB"/>
+                        <segue destination="jyy-DD-xen" kind="presentation" identifier="LoginVC" id="qOI-lC-h8E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="61.600000000000001" y="38.23088455772114"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="h1N-Iu-qfZ">
             <objects>
-                <viewController id="jyy-DD-xen" sceneMemberID="viewController">
+                <viewController id="jyy-DD-xen" customClass="LoginVC" customModule="SnapDevChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="49I-Yi-tOC"/>
                         <viewControllerLayoutGuide type="bottom" id="Xci-aq-V9X"/>
