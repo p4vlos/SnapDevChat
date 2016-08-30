@@ -21,19 +21,26 @@
                             <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ye2-8u-grb" userLabel="PreviewView" customClass="AAPLPreviewView">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-hz-0Eb">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="5hL-Ye-KLR"/>
-                                    <constraint firstAttribute="width" constant="50" id="Wek-Tq-5bc"/>
-                                </constraints>
-                                <state key="normal" image="camera_icon_snap"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq0-Dc-Ao5">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="cLK-yB-mIf"/>
                                     <constraint firstAttribute="width" constant="53" id="xsr-6b-l5U"/>
                                 </constraints>
                                 <state key="normal" image="createsnap_btn"/>
+                                <connections>
+                                    <action selector="record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZc-YP-exy"/>
+                                    <action selector="recordBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJl-HD-11l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-hz-0Eb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="5hL-Ye-KLR"/>
+                                    <constraint firstAttribute="width" constant="50" id="Wek-Tq-5bc"/>
+                                </constraints>
+                                <state key="normal" image="camera_icon_snap"/>
+                                <connections>
+                                    <action selector="changeCameraBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wle-73-CWc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
