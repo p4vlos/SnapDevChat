@@ -55,7 +55,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraBtn" destination="V2b-hz-0Eb" id="Ijk-dK-E3e"/>
                         <outlet property="previewView" destination="Ye2-8u-grb" id="E2Y-MY-dn2"/>
+                        <outlet property="recordBtn" destination="mq0-Dc-Ao5" id="3ME-jx-juB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

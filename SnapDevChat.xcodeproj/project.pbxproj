@@ -14,7 +14,8 @@
 		113AC30D1D75C203008216B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 113AC30B1D75C203008216B7 /* LaunchScreen.storyboard */; };
 		113AC3191D75C303008216B7 /* AAPLPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 113AC3161D75C303008216B7 /* AAPLPreviewView.m */; };
 		113AC31A1D75C303008216B7 /* AAPLCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 113AC3181D75C303008216B7 /* AAPLCameraViewController.m */; };
-		113AC31F1D75DF37008216B7 /* APPLCameraVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113AC31E1D75DF37008216B7 /* APPLCameraVCDelegate.swift */; };
+		113AC3221D75FC74008216B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 113AC3211D75FC74008216B7 /* GoogleService-Info.plist */; };
+		9B4D2A3E2F51A9F717DDE840 /* Pods_SnapDevChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE23CF9DC2D073802DBEF3B /* Pods_SnapDevChat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +31,11 @@
 		113AC3161D75C303008216B7 /* AAPLPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAPLPreviewView.m; path = "../../AVCam-iOSUsingAVFoundationtoCaptureImagesandMovies/AVCam/AAPLPreviewView.m"; sourceTree = "<group>"; };
 		113AC3171D75C303008216B7 /* AAPLCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AAPLCameraViewController.h; path = "../../AVCam-iOSUsingAVFoundationtoCaptureImagesandMovies/AVCam/AAPLCameraViewController.h"; sourceTree = "<group>"; };
 		113AC3181D75C303008216B7 /* AAPLCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AAPLCameraViewController.m; path = "../../AVCam-iOSUsingAVFoundationtoCaptureImagesandMovies/AVCam/AAPLCameraViewController.m"; sourceTree = "<group>"; };
-		113AC31E1D75DF37008216B7 /* APPLCameraVCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APPLCameraVCDelegate.swift; sourceTree = "<group>"; };
+		113AC3201D75E2D0008216B7 /* AAPLCameraVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraVCDelegate.h; sourceTree = "<group>"; };
+		113AC3211D75FC74008216B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2FE23CF9DC2D073802DBEF3B /* Pods_SnapDevChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapDevChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C35C54AED81754D36FAEF1 /* Pods-SnapDevChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapDevChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapDevChat/Pods-SnapDevChat.release.xcconfig"; sourceTree = "<group>"; };
+		BD25F235B752594077877CF3 /* Pods-SnapDevChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapDevChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapDevChat/Pods-SnapDevChat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,17 +43,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B4D2A3E2F51A9F717DDE840 /* Pods_SnapDevChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E8DC1B81447A19859711005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2FE23CF9DC2D073802DBEF3B /* Pods_SnapDevChat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		113AC2F61D75C203008216B7 = {
 			isa = PBXGroup;
 			children = (
 				113AC3011D75C203008216B7 /* SnapDevChat */,
 				113AC3001D75C203008216B7 /* Products */,
+				6F4AEA01021EE568091EE97A /* Pods */,
+				0E8DC1B81447A19859711005 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +87,7 @@
 				113AC3091D75C203008216B7 /* Assets.xcassets */,
 				113AC30B1D75C203008216B7 /* LaunchScreen.storyboard */,
 				113AC30E1D75C203008216B7 /* Info.plist */,
+				113AC3211D75FC74008216B7 /* GoogleService-Info.plist */,
 				113AC3141D75C303008216B7 /* SnapDevChat-Bridging-Header.h */,
 			);
 			path = SnapDevChat;
@@ -98,9 +115,18 @@
 		113AC31D1D75DEEA008216B7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				113AC31E1D75DF37008216B7 /* APPLCameraVCDelegate.swift */,
+				113AC3201D75E2D0008216B7 /* AAPLCameraVCDelegate.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		6F4AEA01021EE568091EE97A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD25F235B752594077877CF3 /* Pods-SnapDevChat.debug.xcconfig */,
+				92C35C54AED81754D36FAEF1 /* Pods-SnapDevChat.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 113AC3111D75C203008216B7 /* Build configuration list for PBXNativeTarget "SnapDevChat" */;
 			buildPhases = (
+				ED339907DE485D1F45490CAA /* [CP] Check Pods Manifest.lock */,
 				113AC2FB1D75C203008216B7 /* Sources */,
 				113AC2FC1D75C203008216B7 /* Frameworks */,
 				113AC2FD1D75C203008216B7 /* Resources */,
+				D550C4C4E3B9A44843D8E149 /* [CP] Embed Pods Frameworks */,
+				2D6115EA085C0A1AFB8A00EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,12 +194,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				113AC30D1D75C203008216B7 /* LaunchScreen.storyboard in Resources */,
+				113AC3221D75FC74008216B7 /* GoogleService-Info.plist in Resources */,
 				113AC30A1D75C203008216B7 /* Assets.xcassets in Resources */,
 				113AC3081D75C203008216B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D6115EA085C0A1AFB8A00EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapDevChat/Pods-SnapDevChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D550C4C4E3B9A44843D8E149 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapDevChat/Pods-SnapDevChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED339907DE485D1F45490CAA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		113AC2FB1D75C203008216B7 /* Sources */ = {
@@ -180,7 +258,6 @@
 				113AC3051D75C203008216B7 /* CameraVC.swift in Sources */,
 				113AC3031D75C203008216B7 /* AppDelegate.swift in Sources */,
 				113AC3191D75C303008216B7 /* AAPLPreviewView.m in Sources */,
-				113AC31F1D75DF37008216B7 /* APPLCameraVCDelegate.swift in Sources */,
 				113AC31A1D75C303008216B7 /* AAPLCameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +379,7 @@
 		};
 		113AC3121D75C203008216B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD25F235B752594077877CF3 /* Pods-SnapDevChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -309,7 +387,7 @@
 				INFOPLIST_FILE = SnapDevChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pavlosnicolaou.SnapDevChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavlosnicolaou.SnapDevChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SnapDevChat/SnapDevChat-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -319,6 +397,7 @@
 		};
 		113AC3131D75C203008216B7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92C35C54AED81754D36FAEF1 /* Pods-SnapDevChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -326,7 +405,7 @@
 				INFOPLIST_FILE = SnapDevChat/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = pavlosnicolaou.SnapDevChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pavlosnicolaou.SnapDevChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SnapDevChat/SnapDevChat-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
@@ -352,6 +431,7 @@
 				113AC3131D75C203008216B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
