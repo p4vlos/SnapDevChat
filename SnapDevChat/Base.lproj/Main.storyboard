@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CameraVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CameraVC" customModule="SnapDevChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ye2-8u-grb" userLabel="PreviewView" customClass="AAPLPreviewView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-hz-0Eb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="5hL-Ye-KLR"/>
+                                    <constraint firstAttribute="width" constant="50" id="Wek-Tq-5bc"/>
+                                </constraints>
+                                <state key="normal" image="camera_icon_snap"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq0-Dc-Ao5">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="cLK-yB-mIf"/>
+                                    <constraint firstAttribute="width" constant="53" id="xsr-6b-l5U"/>
+                                </constraints>
+                                <state key="normal" image="createsnap_btn"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mq0-Dc-Ao5" secondAttribute="bottom" constant="8" id="2aR-SD-oes"/>
+                            <constraint firstItem="Ye2-8u-grb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="HKm-Jp-o7J"/>
+                            <constraint firstItem="V2b-hz-0Eb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NdW-NF-bXm"/>
+                            <constraint firstItem="Ye2-8u-grb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="avq-bf-YGM"/>
+                            <constraint firstAttribute="trailing" secondItem="Ye2-8u-grb" secondAttribute="trailing" id="cJe-2r-bo6"/>
+                            <constraint firstAttribute="trailing" secondItem="V2b-hz-0Eb" secondAttribute="trailing" constant="8" id="eWv-pM-8e8"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ye2-8u-grb" secondAttribute="bottom" id="nG9-zP-uKl"/>
+                            <constraint firstItem="mq0-Dc-Ao5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xDj-cZ-Fcj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="Ye2-8u-grb" id="E2Y-MY-dn2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera_icon_snap" width="29" height="24"/>
+        <image name="createsnap_btn" width="30" height="30"/>
+    </resources>
+</document>
