@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mZ3-fi-Z1U">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61.600000000000001" y="38.23088455772114"/>
+            <point key="canvasLocation" x="23" y="-349"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="h1N-Iu-qfZ">
@@ -197,7 +197,75 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqb-jd-ew2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="911" y="38"/>
+            <point key="canvasLocation" x="142" y="461"/>
+        </scene>
+        <!--UsersVC-->
+        <scene sceneID="ZEH-d2-Pkd">
+            <objects>
+                <viewController id="mZ3-fi-Z1U" customClass="UsersVC" customModule="SnapDevChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Df1-bF-afu"/>
+                        <viewControllerLayoutGuide type="bottom" id="rWd-yH-ga3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O0X-NE-RsL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VmT-zR-d9u">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="jpf-57-28l" customClass="UserCell" customModule="SnapDevChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jpf-57-28l" id="LYf-41-Xfn">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTw-7s-1L6">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="9MT-8n-fe2"/>
+                                                        <constraint firstAttribute="width" constant="335" id="qia-71-qaq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="wTw-7s-1L6" firstAttribute="centerY" secondItem="LYf-41-Xfn" secondAttribute="centerY" id="nv7-Yp-Jpf"/>
+                                                <constraint firstItem="wTw-7s-1L6" firstAttribute="leading" secondItem="LYf-41-Xfn" secondAttribute="leading" constant="22" id="uHU-Vx-keN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="firstNameLbl" destination="wTw-7s-1L6" id="23Q-TR-qCj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" translatesAutoresizingMaskIntoConstraints="NO" id="Gnf-Eg-3ET">
+                                <color key="barTintColor" red="0.56470588235294117" green="0.76470588235294112" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VmT-zR-d9u" secondAttribute="trailing" id="03A-ek-gTr"/>
+                            <constraint firstItem="VmT-zR-d9u" firstAttribute="top" secondItem="Gnf-Eg-3ET" secondAttribute="bottom" id="6Bd-hX-1vl"/>
+                            <constraint firstAttribute="trailing" secondItem="Gnf-Eg-3ET" secondAttribute="trailing" id="LOI-Qg-ALD"/>
+                            <constraint firstItem="VmT-zR-d9u" firstAttribute="leading" secondItem="O0X-NE-RsL" secondAttribute="leading" id="MlP-CD-LDH"/>
+                            <constraint firstItem="Gnf-Eg-3ET" firstAttribute="leading" secondItem="O0X-NE-RsL" secondAttribute="leading" id="Vvv-xP-oHl"/>
+                            <constraint firstItem="VmT-zR-d9u" firstAttribute="top" secondItem="Gnf-Eg-3ET" secondAttribute="bottom" id="WQz-WP-p0R"/>
+                            <constraint firstItem="Gnf-Eg-3ET" firstAttribute="top" secondItem="Df1-bF-afu" secondAttribute="bottom" id="YSP-jb-h5z"/>
+                            <constraint firstItem="rWd-yH-ga3" firstAttribute="top" secondItem="VmT-zR-d9u" secondAttribute="bottom" id="dya-iG-TlL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="VmT-zR-d9u" id="stg-dd-lvF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kxm-zc-aw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="-118.29085457271366"/>
         </scene>
     </scenes>
     <resources>
