@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mZ3-fi-Z1U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,11 +58,12 @@
                         <outlet property="previewView" destination="Ye2-8u-grb" id="E2Y-MY-dn2"/>
                         <outlet property="recordBtn" destination="mq0-Dc-Ao5" id="3ME-jx-juB"/>
                         <segue destination="jyy-DD-xen" kind="presentation" identifier="LoginVC" id="qOI-lC-h8E"/>
+                        <segue destination="mZ3-fi-Z1U" kind="show" identifier="UsersVC" id="PBu-Oo-jy6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="23" y="-349"/>
+            <point key="canvasLocation" x="145" y="21"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="h1N-Iu-qfZ">
@@ -197,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mqb-jd-ew2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="461"/>
+            <point key="canvasLocation" x="1044" y="107"/>
         </scene>
         <!--UsersVC-->
         <scene sceneID="ZEH-d2-Pkd">
@@ -242,6 +243,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ab3-9X-RgT">
+                                <items>
+                                    <navigationItem title="Send a Pull Request" id="KZE-ep-PDw">
+                                        <barButtonItem key="rightBarButtonItem" image="send_snap" id="tfO-ZA-GIi">
+                                            <connections>
+                                                <action selector="sendPRBtnPressedWithSender:" destination="mZ3-fi-Z1U" id="U4o-rp-Rzf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <searchBar contentMode="redraw" searchBarStyle="prominent" translatesAutoresizingMaskIntoConstraints="NO" id="Gnf-Eg-3ET">
                                 <color key="barTintColor" red="0.56470588235294117" green="0.76470588235294112" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -251,12 +263,14 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VmT-zR-d9u" secondAttribute="trailing" id="03A-ek-gTr"/>
                             <constraint firstItem="VmT-zR-d9u" firstAttribute="top" secondItem="Gnf-Eg-3ET" secondAttribute="bottom" id="6Bd-hX-1vl"/>
-                            <constraint firstAttribute="trailing" secondItem="Gnf-Eg-3ET" secondAttribute="trailing" id="LOI-Qg-ALD"/>
                             <constraint firstItem="VmT-zR-d9u" firstAttribute="leading" secondItem="O0X-NE-RsL" secondAttribute="leading" id="MlP-CD-LDH"/>
-                            <constraint firstItem="Gnf-Eg-3ET" firstAttribute="leading" secondItem="O0X-NE-RsL" secondAttribute="leading" id="Vvv-xP-oHl"/>
-                            <constraint firstItem="VmT-zR-d9u" firstAttribute="top" secondItem="Gnf-Eg-3ET" secondAttribute="bottom" id="WQz-WP-p0R"/>
-                            <constraint firstItem="Gnf-Eg-3ET" firstAttribute="top" secondItem="Df1-bF-afu" secondAttribute="bottom" id="YSP-jb-h5z"/>
+                            <constraint firstItem="Gnf-Eg-3ET" firstAttribute="leading" secondItem="O0X-NE-RsL" secondAttribute="leading" id="TCt-85-wac"/>
+                            <constraint firstItem="ab3-9X-RgT" firstAttribute="leading" secondItem="O0X-NE-RsL" secondAttribute="leading" id="UDu-PV-1R4"/>
+                            <constraint firstItem="ab3-9X-RgT" firstAttribute="top" secondItem="O0X-NE-RsL" secondAttribute="top" constant="20" id="WVm-uz-gRO"/>
                             <constraint firstItem="rWd-yH-ga3" firstAttribute="top" secondItem="VmT-zR-d9u" secondAttribute="bottom" id="dya-iG-TlL"/>
+                            <constraint firstItem="Gnf-Eg-3ET" firstAttribute="top" secondItem="ab3-9X-RgT" secondAttribute="bottom" id="ecY-Ro-EwM"/>
+                            <constraint firstAttribute="trailing" secondItem="ab3-9X-RgT" secondAttribute="trailing" id="sVg-a0-O2i"/>
+                            <constraint firstAttribute="trailing" secondItem="Gnf-Eg-3ET" secondAttribute="trailing" id="vL4-8Q-Zem"/>
                         </constraints>
                     </view>
                     <connections>
@@ -265,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kxm-zc-aw9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044" y="-118.29085457271366"/>
+            <point key="canvasLocation" x="573.60000000000002" y="-696.7016491754124"/>
         </scene>
     </scenes>
     <resources>
@@ -273,5 +287,6 @@
         <image name="createsnap_btn" width="30" height="30"/>
         <image name="devslopes" width="1080" height="1349"/>
         <image name="devslopes-mountains-white" width="451" height="335"/>
+        <image name="send_snap" width="24" height="23"/>
     </resources>
 </document>
