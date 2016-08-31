@@ -18,6 +18,7 @@
 		113AC3241D7608FA008216B7 /* roundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113AC3231D7608FA008216B7 /* roundTextField.swift */; };
 		113AC3261D761109008216B7 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113AC3251D761109008216B7 /* RoundedButton.swift */; };
 		113AC3281D761901008216B7 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113AC3271D761901008216B7 /* LoginVC.swift */; };
+		113AC32B1D761CE7008216B7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113AC32A1D761CE7008216B7 /* AuthService.swift */; };
 		9B4D2A3E2F51A9F717DDE840 /* Pods_SnapDevChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FE23CF9DC2D073802DBEF3B /* Pods_SnapDevChat.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		113AC3231D7608FA008216B7 /* roundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = roundTextField.swift; sourceTree = "<group>"; };
 		113AC3251D761109008216B7 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		113AC3271D761901008216B7 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		113AC32A1D761CE7008216B7 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		2FE23CF9DC2D073802DBEF3B /* Pods_SnapDevChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapDevChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C35C54AED81754D36FAEF1 /* Pods-SnapDevChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapDevChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapDevChat/Pods-SnapDevChat.release.xcconfig"; sourceTree = "<group>"; };
 		BD25F235B752594077877CF3 /* Pods-SnapDevChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapDevChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapDevChat/Pods-SnapDevChat.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		113AC3011D75C203008216B7 /* SnapDevChat */ = {
 			isa = PBXGroup;
 			children = (
+				113AC3291D761CD2008216B7 /* Services */,
 				113AC31D1D75DEEA008216B7 /* Protocols */,
 				113AC31C1D75C311008216B7 /* Controller */,
 				113AC31B1D75C30D008216B7 /* View */,
@@ -127,6 +130,14 @@
 				113AC3201D75E2D0008216B7 /* AAPLCameraVCDelegate.h */,
 			);
 			name = Protocols;
+			sourceTree = "<group>";
+		};
+		113AC3291D761CD2008216B7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				113AC32A1D761CE7008216B7 /* AuthService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		6F4AEA01021EE568091EE97A /* Pods */ = {
@@ -271,6 +282,7 @@
 				113AC3241D7608FA008216B7 /* roundTextField.swift in Sources */,
 				113AC3191D75C303008216B7 /* AAPLPreviewView.m in Sources */,
 				113AC31A1D75C303008216B7 /* AAPLCameraViewController.m in Sources */,
+				113AC32B1D761CE7008216B7 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
